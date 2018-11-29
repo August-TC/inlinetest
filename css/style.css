@@ -1,0 +1,313 @@
+@font-face {
+
+	/* 方正宋三简体 */
+	font-family: 'SongSanJian';
+	src: url("../font/FangZheng-SongSanJian.ttf");
+}
+
+@font-face {
+
+	/* 文悦古典明朝体 */
+	font-family: 'WenyueGUDIAN';
+	src: url("../font/WenYue-GuDianMingChaoTi-NC-W5.otf");
+}
+
+html,
+body {
+
+	/* 主体布局大小 */
+	height: 100%;
+	width: 100%;
+
+	/* 主体布局位置 */
+	margin: 0px auto;
+}
+
+body {
+
+	/* 主题默认样式 */
+	font-family: SongSanJian, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: gray;
+
+	/* 主体布局位置 */
+	margin: 0px auto;
+	overflow: hidden;
+	/* 禁用滚动 */
+}
+
+/* 右上角旋转模型 样式 */
+.header {
+
+	/* 模型大小 */
+	height: 4.5%;
+
+	/* 模型布局位置 */
+	position: absolute;
+	z-index: 100;
+	top: 0px;
+	margin-top: 5%;
+	right: 6%;
+}
+
+/* 主图片展示区域 样式 */
+.adj {
+
+	/* 主图片布局位置 */
+	margin: 0px 6%;
+	margin-top: 5px;
+	background-color: rgba(0, 0, 0, 0.78);
+
+	/* 主图片展示区域大小 */
+	width: 88%;
+	height: 54%;
+
+	/* 主图片展示区域内部布局属性：flex布局 */
+	display: box;			/* OLD - Android 4.4- */
+	display: -webkit-box;	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		/* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	/* TWEENER - IE 10 */
+	display: -webkit-flex;	/* NEW - Chrome */
+	display: flex;			/* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/* 内容页面 样式 */
+.core {
+
+	/* 内容页面大小 */
+	width: 100%;
+	height: 100%;
+
+	/* 内容页面布局位置 */
+	margin: 0px auto;
+
+	/* 内容页面背景设置 */
+	background: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+
+	/* 内部元素对齐方式 */
+	vertical-align: middle;
+}
+
+/* 图文内容部分 样式 */
+.slide {
+
+	/* 图文内容部分布局位置 */
+	position: absolute;
+	top: 6.75%;
+	margin-top: 5%;
+	bottom: 0px;
+
+	/* 图文内容部分大小 */
+	width: 100%;
+
+	/* 图文内容部分的图文对齐方式 */
+	text-align: center;
+
+	/* 图文内容部分文字默认大小 */
+	font-size: 18px;
+}
+
+/* 文字内容展示 样式 */
+.content {
+
+	/* 文字内容展示布局位置 */
+	position: absolute;
+	top: 54%;
+	margin-top: 5px;
+	bottom: 0px;
+
+	/* 文字内容展示大小 */
+	width: 100%;
+}
+
+/* 细节介绍 样式 */
+.content-part-up {
+
+	/* 细节介绍大小 */
+	height: 36%;
+	width: 82%;
+
+	/* 细节介绍布局位置 */
+	margin: 6%;
+	padding: 3%;
+
+	/* 细节介绍背景设置 */
+	background-color: rgba(70, 70, 70, 0.5);
+
+	/* 设置圆角 */
+	border: 0px;
+	border-top-left-radius: 30px;
+	-moz-border-top-left-radius: 30px;
+	-webkit-border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	-moz-border-bottom-right-radius: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+}
+
+/* 载乐俑介绍区域 样式 */
+.content-part-down {
+
+	/* 载乐俑介绍区域布局位置 */
+	position: absolute;
+	top: 51%;
+	bottom: 0px;
+	margin: 6%;
+	padding: 3%;
+
+	/* 载乐俑介绍区域大小 */
+	width: 82%;
+	overflow: auto;
+	
+	/* 载乐俑介绍区域背景设置 */
+	background-color: rgba(70, 90, 100, 0.5);
+
+	/* 设置圆角 */
+	border: 0px;
+	border-top-left-radius: 30px;
+	-moz-border-top-left-radius: 30px;
+	-webkit-border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	-moz-border-bottom-right-radius: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+}
+
+/* 细节图片展示区域 样式 */
+.content-part-pic {
+
+	/* 细节图片展示区域大小 */
+	width: 35%;
+	height: 100%;
+
+	/* 细节图片展示区域布局位置 */
+	margin-right: 5%;
+	float: left;
+
+	/* 细节图片展示区域内部布局属性：flex布局 */
+	display: box;			/* OLD - Android 4.4- */
+	display: -webkit-box;	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		/* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	/* TWEENER - IE 10 */
+	display: -webkit-flex;	/* NEW - Chrome */
+	display: flex;			/* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+/* 细节内容展示区域 样式 */
+.content-part-txt {
+
+	/* 细节内容展示区域大小 */
+	width: 60%;
+	height: 100%;
+	overflow: auto;
+
+	/* 细节内容展示区域布局位置 */
+	float: left;
+}
+
+/* 主图片展示 样式 */
+.main-pic {
+
+	/* 主图片展示大小 */
+	max-height: 100%;
+	max-width: 100%;
+
+	/* 主图片展示布局位置 */
+	margin: auto;
+}
+
+/* 细节图片展示 样式 */
+.detail-pic {
+
+	/* 细节图片展示大小 */
+	max-width: 100%;
+	max-height: 100%;
+	
+	/* 细节图片展示布局位置 */
+	vertical-align: middle;
+	margin: auto;
+}
+
+/* 播放控制图片 样式 */
+.control-pic {
+
+	/* 播放控制图片大小 */
+	width: 50%;
+
+	/* 播放控制图片布局位置 */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -25%;
+	margin-top: -25%;
+
+	/* 播放控制图片透明度设置 */
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+/* 内容文字 样式 */
+.index-text {
+
+	/* 内容文字布局位置 */
+	margin: 0px;
+
+	/* 内容文字字体设置 */
+	font-family: FangSong, STFangsong, FangSong_GB2312, 'myFont';
+	text-indent: 2em;
+	text-align: left;
+	line-height: 24px;
+	color: lightgray;
+	font-size: 13px;
+}
+
+/* 提示信息样式 */
+.hint {
+
+	/* 提示信息字体样式 */
+	font-family: FangSong, STFangsong, FangSong_GB2312, 'myFont';
+	font-size: 13px;
+	color: lightgray;
+
+	/* 提示信息布局位置 */
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+/* 用于控制音乐播放的蒙版的样式 */
+.media-control {
+
+	/* 蒙版大小 */
+	width: 30%;
+	height: 36%;
+
+	/* 蒙版布局位置 */
+	position: absolute;
+	margin: 9%;
+
+	/* 蒙版背景设置 */
+	background-color: black;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	
+	/* 初始状态下，蒙版不显示 */
+	display: none;
+
+	/* 设置圆角 */
+	border: 0px;
+	border-top-left-radius: 30px;
+	-moz-border-top-left-radius: 30px;
+	-webkit-border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	-moz-border-bottom-right-radius: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>启动页</title>
+	<style type="text/css">
+		@font-face {
+
+			/* 方正宋三简体 */
+			font-family: 'SongSanJian';
+			src: url("font/FangZheng-SongSanJian.ttf");
+		}
+
+		html,
+		body {
+
+			/* 主体布局大小 */
+			height: 100%;
+			width: 100%;
+
+			/* 主体布局位置 */
+			margin: 0px auto;
+		}
+
+		body {
+
+			/* 主题默认样式 */
+			font-family: SongSanJian, Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: gray;
+
+			/* 主体布局位置 */
+			margin: 0px auto;
+			overflow: hidden;
+			/* 禁用滚动 */
+		}
+
+		.main {
+			/* background-image: url(img/bg.jpg); */
+			background: url(img/index_bg.jpg) rgb(31, 31, 31);
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			-webkit-background-size: 100% 100%;
+			-o-background-size: 100% 100%;
+			background-attachment: fixed;
+
+		}
+
+		.processcontainer {
+			width: 100%;
+			border: 1px solid #999;
+			height: 0.3vh;
+			position: absolute;
+			/* left: 50%; */
+			/* margin-left: -15%; */
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+
+		}
+
+		#processbar {
+			background: #999;
+			float: left;
+			height: 100%;
+			text-align: center;
+			color: white;
+			line-height: 150%;
+			opacity: 0.8;
+		}
+
+		.pic {
+			margin: 0 auto;
+			display: block;
+			max-width: 100%;
+			max-height: 80%;
+		}
+
+		.footer {
+
+			width: 50%;
+			height: 18%;
+			position: absolute;
+			/* left: 50%; */
+			bottom: 4%;
+			/* margin-left: -45%; */
+			color: lightgray;
+			font-size: 3.4vw;
+			text-align: right;
+		}
+
+		.loading-content {
+			position: absolute;
+			width: 25%;
+			height: 18%;
+			/* top: 38%; */
+			bottom: 4%;
+			right: 10%;
+		}
+
+		.items {
+			position: absolute;
+			width: 100%;
+			bottom: 24%;
+			top: 60%;
+
+		}
+
+		.single {
+			position: absolute;
+			width: 25%;
+			height: 100%;
+			text-align: center;
+			text-align: center;
+			display: -webkit-box;
+			-webkit-box-align: center;
+			-webkit-box-pack: center;
+			display: -moz-box;
+			-moz-box-align: center;
+			-moz-box-pack: center;
+			display: -o-box;
+			-o-box-align: center;
+			-o-box-pack: center;
+			display: -ms-box;
+			-ms-box-align: center;
+			-ms-box-pack: center;
+			display: box;
+			box-align: center;
+			box-pack: center;
+		}
+
+		.single img {
+			max-width: 100%;
+			max-height: 100%;
+			margin: 0% auto;
+		}
+	</style>
+
+	<script type="text/javascript" src="js/cookie.js"></script>
+
+	<link rel="prefetch" href="img/loding.gif" />
+
+	<link rel="prefetch" href="font/FangZheng-SongSanJian.ttf" />
+
+	<link rel="prefetch" href="font/WenYue-GuDianMingChaoTi-NC-W5.otf" />
+
+</head>
+
+<body class="main">
+	<div class="loading-content">
+		<img src="img/loding.gif" class="pic" />
+		<!--启动加载页面-->
+		<p><br></p>
+		<div class="processcontainer">
+			<!--启动加载进度条-->
+			<div id="processbar" style="width:0%;"></div>
+		</div>
+	</div>
+	<div class="items">
+		<div class="single" style="left: 0%;">
+			<img src="img/item1.png" />
+
+		</div>
+		<div class="single" style="left:25%;">
+
+			<img src="img/item2.png" />
+		</div>
+		<div class="single" style="left:50%;">
+			<img src="img/item3.png" />
+
+		</div>
+		<div class="single" style="left:75%;">
+			<img src="img/item4.png" />
+
+		</div>
+	</div>
+	<div class="footer">
+		<div style="margin: 0 auto; height: 20%;">新华社对外部</div>
+		<div style="margin: 0 auto; height: 20%;">新华社新媒体中心</div>
+		<div style="margin: 0 auto; height: 20%;">新华社陕西分社</div>
+		<div style="margin: 0 auto; height: 20%;">西北工业大学新媒体团队</div>
+		<div style="margin: 0 auto; height: 20%;">联合出品</div>
+	</div>
+</body>
+
+<script src="js/imgLoader.js"></script>
+<script language="JavaScript">
+	// 设置进度条加载进度
+
+	function setProcess() {
+
+		var processbar = document.getElementById("processbar");
+		var res = ["img/band.png", "img/bg.jpg", "img/frame.png", "img/guanzi.png", "img/hengdi.png", "img/konghou.png",
+			"img/logo.png", "img/menu.png", "img/msg.png", "img/msg_success.png", "img/paixiao.png", "img/paixiao2.png",
+			"img/pipa.png", "img/play.png", "img/sheng.png", "img/stop.png", "img/underline.png", "img/yong1.png",
+			"img/yong2.png", "img/yong3.png", "img/yong4.png", "img/yong5.png", "img/yong6.png",
+			"img/yong7.png"
+		];
+		/*	
+
+		*/
+
+		// 预加载图片资源
+		imgLoader(res, function (percentage) {
+			console.log(percentage);
+			// 根据图片加载进度设置进度条进度
+			processbar.style.width = parseInt(percentage * 100) + "%";
+			//processbar.innerHTML = processbar.style.width;
+
+			// 当加载进度超过100%，即跳转到content.html
+			if (percentage >= 1) {
+				window.location.href = "content.html";
+			}
+		});
+
+
+	}
+
+	function checkCookie(name, value) {
+		var cname = getCookie(name)
+		if (cname != null && cname != "") {
+			deleteCookie(name);
+		}
+
+	}
+
+	// 加载进度条
+	window.onload = function () {
+		//bartimer;
+		checkCookie("status", "visiting");
+		setProcess();
+	}
+</script>
+
+</html>

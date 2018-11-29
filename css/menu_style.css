@@ -1,0 +1,119 @@
+@font-face {
+
+    /* 方正宋三简体 */
+    font-family: 'SongSanJian';
+    src: url("../font/FangZheng-SongSanJian.ttf");
+}
+
+@font-face {
+
+    /* 文悦古典明朝体 */
+    font-family: 'WenyueGUDIAN';
+    src: url("../font/WenYue-GuDianMingChaoTi-NC-W5.otf");
+}
+
+html,
+body {
+
+    /* 主体布局大小 */
+    height: 100%;
+    width: 100%;
+
+    /* 主体布局位置 */
+    margin: 0px auto;
+}
+
+body {
+
+    /* 主题默认样式 */
+    font-family: SongSanJian, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: gray;
+
+    /* 主体布局位置 */
+    margin: 0px auto;
+    overflow: hidden;
+    /* 禁用滚动 */
+}
+
+/* 内容页面 样式 */
+.core {
+
+    /* 内容页面大小 */
+    width: 100%;
+    height: 100%;
+
+    /* 内容页面布局位置 */
+    margin: 0px auto;
+
+    /* 内容页面背景设置 */
+    background: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-attachment: fixed;
+
+    /* 内部元素对齐方式 */
+    vertical-align: middle;
+}
+
+/* 左上角标志 样式 */
+.logo {
+
+    /* 标志大小 */
+    height: 4.5%;
+
+    /* 标志布局位置 */
+    margin-top: 5%;
+    margin-left: 6%
+}
+
+/* 选项列表 样式 */
+.menu-list {
+
+    /* 选项列表大小 */
+    width: 72%;
+    height: 45%;
+
+    /* 选项列表布局位置 */
+    margin: 0px auto;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    margin-left: -36%;
+
+}
+
+/* 单个选项 样式*/
+.menu-item {
+    width: 100%;
+    height: 25%;
+
+    /* 单个选项内部元素对齐方式：水平垂直居中 */
+    display: table;
+    text-align: center;
+
+    /* 单个选项文字字体设置 */
+    font-family: WenyueGUDIAN;
+    font-size: 6vw;
+    letter-spacing: 2.5vw;
+    text-align: left;
+}
+
+/* 页脚 样式 */
+.footer {
+
+    /* 页脚区域大小 */
+    width: 90%;
+
+    /* 页脚布局位置 */
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    margin-left: -45%;
+
+    /* 页脚文字字体 */
+    color: gray;
+    font-size: 3vw;
+}

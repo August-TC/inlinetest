@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+		<title>关于载乐俑</title>
+
+		<!-- 链接页面主要CSS样式-->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/aboutzaiyueyong.css" />
+		<!-- jQuery js库 -->
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/iphone-inline-video.min.js"></script>
+	</head>
+
+	<body style="height: 100%;">
+
+		<div class="menu-core">
+
+			<!-- 右上角关闭菜单按钮 -->
+			<img id="menu_return" class="menu" src="img/return.png" style="z-index:100;" />
+
+			<div class="menu-list">
+				<div class="menu-item" onclick="HRef('content.html')">
+					<img src="img/underline.png" style="position: absolute; width: 100%; top: 19%; left: 0px;" />
+					<p style="display: table-cell; vertical-align: middle; z-index: 200;">「壹」主界面</p>
+				</div>
+				<div class="menu-item" id="crt-page">
+					<img src="img/underline.png" style="position: absolute; width: 100%; top: 39%; left: 0px;" />
+					<p style="display: table-cell; vertical-align: middle;">「贰」关于载乐俑</p>
+				</div>
+				<div class="menu-item" onclick="HRef('album.html')">
+					<img src="img/underline.png" style="position: absolute; width: 100%; top: 59%; left: 0px;" />
+					<p style="display: table-cell; vertical-align: middle;">「叁」大唐乐库</p>
+				</div>
+				<div class="menu-item" onclick="HRef('message.html')">
+					<img src="img/underline.png" style="position: absolute; width: 100%; top: 79%; left: 0px;" />
+					<p style="display: table-cell; vertical-align: middle;">「肆」给唐朝留言</p>
+				</div>
+				<div class="menu-item" onclick="HRef('addition.html')">
+					<img src="img/underline.png" style="position: absolute; width: 100%; top: 99%; left: 0px;" />
+					<p style="display: table-cell; vertical-align: middle;">「伍」关于我们</p>
+				</div>
+			</div>
+
+			<!-- 页脚：团队信息 -->
+			<div class="footer">
+				<!-- <div id="info" style="text-align: center; display: none;">新华社陕西分社&nbsp;西北工业大学新媒体团队&nbsp;&nbsp;联合出品</div> -->
+			</div>
+
+		</div>
+
+		<!-- 内容页面 -->
+		<div class="core">
+
+			<!-- 应用的标志，位于左上角-->
+			<img src="img/logo.png" style="height:6.75%; margin-top:5%; margin-left:6%; position: absolute;	z-index: 100;" />
+
+			<!-- 右上角菜单按钮 -->
+			<!-- <img id="menu_open" class="menu" src="img/menu2.png" style="height:6%;" /> -->
+			<div class="menu">
+				<!-- <div class="menu-item" style="left: 0%;" onclick="HRef('content.html')">
+					<span style="display: table-cell; vertical-align: middle;">主界面</span>
+				</div>
+				<div class="menu-item" style="left: 25%;" onclick="HRef('album.html')">
+					<span style="display: table-cell; vertical-align: middle;">唐乐库</span>
+				</div>
+				<div class="menu-item" style="left: 50%;" onclick="HRef('message.html')">
+					<span style="display: table-cell; vertical-align: middle;">致唐朝</span>
+				</div> -->
+				<div class="menu-item" style="left: 75%;" onclick="HRef('content.html')">
+					<!--<span style="display: table-cell; vertical-align: middle;">返&nbsp;&nbsp;回</span>-->
+					<span style="display: table-cell; vertical-align: middle;">返&nbsp;&nbsp;回</span>
+				</div>
+			</div>
+
+			<!-- 图文内容部分 -->
+			<div class="slide">
+				<div class='about_hint'>
+					<p>骆驼上的“巡回乐团”</p>
+					<p>“主唱”唱的什么歌?</p>
+				</div>
+				<div class="about_video">
+					<p>大型实景历史舞剧《长恨歌》节选</p>
+
+					<video   poster="img/video_start.png" src="video/changhenge.mp4" controls="controls" hight="450" x-webkit-airplay="allow"  x5-video-player-type="h5" 　  x5-video-player-fullscreen="true" 　  x5-video-orientation="portraint" 　  webkit-playsinline="true" 　  playsinline="true"
+						webkit-playsinline playsinline x5-playsinline x-webkit-airplay="allow"
+						
+						>
+					</video>
+				</div>
+
+				<!-- 载乐俑介绍区域 -->
+				<div class="about_content-part-down">
+					<p id="intro" class="about_index-text" style="margin: 0 auto;">
+						盛唐乐队C位出道，千年后的你来点歌！
+					</p>
+
+					<p id="intro" class="about_index-text" style="margin: 0 auto;">
+						乐队简介：七名美男乐手围坐一周，一位丰腴仕女担任“主唱”；
+					</p>
+					<p id="intro" class="about_index-text" style="margin: 0 auto;">
+						流动舞台：双峰驼，主要生存在中国、蒙古、中亚等地；
+					</p>
+					<p id="intro" class="about_index-text" style="margin: 0 auto;">
+						主打风格：开元天宝年间流行歌曲——“胡部新声”，传自河西少数民族地区；
+					</p>
+					<p id="intro" class="about_index-text" style="margin: 0 auto;">
+						服装造型：乐手穿圆领窄袖长袍；
+					</p>
+					<p id="intro" class="about_index-text" style="margin: 0 auto;">
+						乐队流派：唐三彩，以绿、黄、蓝三色为主，低温釉陶工艺，大多数用于殉葬；
+					</p>
+					<p id="intro" class="about_index-text" style="margin: 0 auto;">
+						这支“乐队”，自1959年在西安市西郊出道至今将近60年，穿越千年为你歌唱，被圈粉了吗？
+					</p>
+
+				</div>
+
+			</div>
+
+			<!-- 页脚：团队信息 -->
+			<div class="footer">
+				<!-- <div id="info" style="text-align: center">新华社陕西分社&nbsp;西北工业大学新媒体团队&nbsp;&nbsp;联合出品</div> -->
+			</div>
+
+		</div>
+
+		<script>
+			function HRef(addr) {
+				//跳转到页面 addr
+				window.location.href = addr;
+			}
+
+			$(document).ready(function() {
+
+				$(".logo").fadeIn(1500);
+				$(".menu").slideToggle(1500);
+
+				$("#menu_open").click(function() {
+					$(".menu-core").slideToggle(1500);
+					// $(".menu-core").fadeIn(1000);
+					setTimeout(() => {
+						$(".menu-list").fadeIn(1500);
+						$("#info").fadeIn(1500);
+					}, 200);
+					setTimeout(() => {
+						$(".about_video").css('display', 'none');
+					}, 400);
+				});
+
+				$("#crt-page").click(function(event) {
+					$(".menu-list").fadeOut(1000);
+					$(".menu-core").slideToggle(1500);
+					// $(".menu-core").fadeOut();
+					$("#info").fadeOut(1500);
+					// $(".about_video").css('display', 'block');
+					setTimeout(() => {
+						$(".about_video").css('display', 'block');
+
+					}, 1000);
+					event.stopPropagation();
+				});
+
+				$(".menu-core").click(function(event) {
+					$(".menu-list").fadeOut(1000);
+					$(".menu-core").slideToggle(1500);
+					// $(".menu-core").fadeOut();
+					$("#info").fadeOut(1500);
+					event.stopPropagation();
+					setTimeout(() => {
+						$(".about_video").css('display', 'block');
+
+					}, 1000);
+				});
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,283 @@
+@font-face {
+
+	/* 方正宋三简体 */
+	font-family: 'SongSanJian';
+	src: url("../font/FangZheng-SongSanJian.ttf");
+}
+
+@font-face {
+
+	/* 文悦古典明朝体 */
+	font-family: 'WenyueGUDIAN';
+	src: url("../font/WenYue-GuDianMingChaoTi-NC-W5.otf");
+}
+
+body {
+	font-family: SongSanJian, STFangsong, FangSong_GB2312, 'myFont';
+}
+
+/* 右上角菜单按钮 样式 */
+.menu {
+
+	width: 33%;
+	height: 11%;
+	position: absolute;
+	z-index: 50;
+	top: 0px;
+	right: 6%;
+	padding: 0px;
+	/* background: yellow; */
+	opacity: 0.6;
+
+	display: none;
+}
+
+.selections {
+	width: 33%;
+	height: 11%;
+	position: absolute;
+	z-index: 50;
+	top: 0px;
+	right: 6%;
+	padding: 0px;
+	/* background: yellow; */
+	opacity: 0.6;
+}
+
+/* 内容页面 样式 */
+.menu-core {
+	display: none;
+	/* 内容页面大小 */
+	width: 100%;
+	height: 100%;
+
+	/* 内容页面布局位置 */
+	position: absolute;
+	z-index: 75;
+	top: 0%;
+	margin: 0px auto;
+
+	/* 内容页面背景设置 */
+	background: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-attachment: fixed;
+
+	/* 内部元素对齐方式 */
+	vertical-align: middle;
+}
+
+/* 选项列表 样式 */
+.menu-list {
+
+	/* 选项列表大小 */
+	width: 72%;
+	height: 50%;
+
+	/* 选项列表布局位置 */
+	margin: 0px auto;
+	position: absolute;
+	top: 27%;
+	left: 50%;
+	margin-left: -36%;
+
+	display: none;
+
+}
+
+/* 单个选项 样式*/
+.menu-item {
+	width: 25%;
+	height: 100%;
+
+	position: absolute;
+	top: 0%;
+
+	/* 单个选项内部元素对齐方式：水平垂直居中 */
+	display: table;
+	text-align: center;
+
+	background: url(../img/menu_item.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+
+	/* 单个选项文字字体设置 */
+	font-family: WenyueGUDIAN;
+
+	text-align: center;
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+
+	font-size: 2.3vh;
+	color: rgba(0, 0, 0, 0.9);
+	-webkit-filter: brightness(120%);
+	/* Chrome, Safari, Opera */
+	filter: brightness(120%);
+}
+
+.about_hint {
+	margin-top: 5%;
+	width: 100%;
+	/* height: 20%; */
+	/* 提示信息字体样式 */
+	font-family: WenyueGUDIAN, STFangsong, FangSong_GB2312, 'myFont';
+	color: gray;
+	/*line-height: 40px;*/
+}
+
+.about_hint p {
+	width: 100%;
+
+	margin: 0 auto;
+	text-align: center;
+	font-size: 7vw;
+}
+
+.about_video {
+
+	margin-left: 10%;
+	margin-top: 5%;
+	width: 80%;
+	height: 30%;
+
+}
+
+.about_video p {
+	font-family: WenyueGUDIAN, STFangsong, FangSong_GB2312, 'myFont';
+	color: gray;
+	width: 100%;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 4vw;
+}
+
+.about_video video {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	border: 1px solid #000;
+}
+
+/* 载乐俑介绍区域 样式 */
+.about_content-part-down {
+
+	/* 载乐俑介绍区域布局位置 */
+	position: absolute;
+	/*
+	bottom: 0px;
+	
+	
+	margin-bottom: 20%;
+	*/
+	/* margin-top: 10px;*/
+	top: 58%;
+	bottom: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+	/* 载乐俑介绍区域大小 */
+	width: 80%;
+	overflow: auto;
+	border: 0px;
+
+}
+
+/* 内容文字 样式 */
+.about_index-text {
+
+	/* 内容文字布局位置 */
+	margin: 0px;
+
+	/* 内容文字字体设置 */
+	font-family: SongSanJian, STFangsong, FangSong_GB2312, 'myFont';
+	text-indent: 2em;
+	text-align: left;
+	/*line-height: 28px;*/
+	color: gray;
+	font-size: 4vw;
+	line-height: 4vh;
+}
+
+
+
+.liuyan_pic {
+	padding-top: 20px;
+	margin-left: 10%;
+	width: 80%;
+	/* hight: 35%; */
+}
+
+.liuyan_pic img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+
+
+
+
+
+
+
+.arrow {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -40px;
+	left: 5px;
+}
+
+
+
+.arrow em {
+	border-color: #a1a1a1 transparent transparent;
+
+}
+
+.arrow span {
+	border-color: grey transparent transparent;
+	top: -4px;
+
+}
+
+.detail {
+	margin-top: 10%;
+	margin-left: 15%;
+	width: 70%;
+	border: 2px solid #a1a1a1;
+	position: relative;
+	background-color: grey;
+	border-radius: 10px;
+}
+
+.arrow * {
+	display: block;
+
+	border-width: 30px 15px;
+	position: absolute;
+	border-style: solid dashed dashed dashed;
+	font-size: 0;
+	line-height: 0;
+}
+
+/* 页脚 样式 */
+.footer {
+
+	/* 页脚区域大小 */
+	width: 90%;
+
+	/* 页脚布局位置 */
+	position: absolute;
+	left: 50%;
+	bottom: 3%;
+	margin-left: -45%;
+
+	/* 页脚文字字体 */
+	color: gray;
+	font-size: 3vw;
+}

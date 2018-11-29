@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>唐三彩载乐俑</title>
+    <!-- Add IntroJs styles -->
+    <link href="css/introjs.min.css" rel="stylesheet">
+
+    <!-- 链接轮播图CSS样式 -->
+    <link rel="stylesheet" href="css/dist/swiper.min.css">
+
+    <!-- 链接页面主要CSS样式-->
+    <link rel="stylesheet" href="css/content_style.css" />
+
+    <!-- jQuery js库 -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript" src="js/cookie.js"></script>
+
+    <link rel="prefetch" href="img/1.png" />
+    <link rel="prefetch" href="img/2.png" />
+    <link rel="prefetch" href="img/3.png" />
+    <link rel="prefetch" href="img/4.png" />
+    <link rel="prefetch" href="img/5.png" />
+    <link rel="prefetch" href="img/6.png" />
+    <link rel="prefetch" href="img/7.png" />
+    <link rel="prefetch" href="img/8.png" />
+    <link rel="prefetch" href="img/9.png" />
+    <link rel="prefetch" href="img/10.png" />
+    <link rel="prefetch" href="img/11.png" />
+    <link rel="prefetch" href="img/12.png" />
+    <link rel="prefetch" href="img/13.png" />
+    <link rel="prefetch" href="img/14.png" />
+    <link rel="prefetch" href="img/15.png" />
+    <link rel="prefetch" href="img/16.png" />
+    <link rel="prefetch" href="img/17.png" />
+    <link rel="prefetch" href="img/18.png" />
+    <link rel="prefetch" href="img/19.png" />
+    <link rel="prefetch" href="img/20.png" />
+    <link rel="prefetch" href="img/21.png" />
+    <link rel="prefetch" href="img/22.png" />
+    <link rel="prefetch" href="img/23.png" />
+    <link rel="prefetch" href="img/24.png" />
+
+
+</head>
+
+<body>
+
+    <div class="menu-core">
+
+        <!-- 右上角关闭菜单按钮 -->
+        <img id="menu_return" class="menu" src="img/return.png" style="z-index:100;" />
+
+        <div class="menu-list">
+            <div class="menu-item" id="crt-page">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 19%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle; z-index: 200;">「壹」主界面</p>
+            </div>
+            <div class="menu-item" onclick="HRef('about.html')">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 39%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle;">「贰」关于载乐俑</p>
+            </div>
+            <div class="menu-item" onclick="HRef('album.html')">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 59%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle;">「叁」大唐乐库</p>
+            </div>
+            <div class="menu-item" onclick="HRef('message.html')">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 79%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle;">「肆」给唐朝留言</p>
+            </div>
+            <div class="menu-item" onclick="HRef('addition.html')">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 99%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle;">「伍」关于我们</p>
+            </div>
+        </div>
+
+        <!-- 页脚：团队信息 -->
+        <div class="footer">
+            <!-- <div id="info" style="text-align: center; display: none;">新华社陕西分社&nbsp;西北工业大学新媒体团队&nbsp;&nbsp;联合出品</div> -->
+        </div>
+
+    </div>
+
+    <!-- 内容页面 -->
+    <div id="main" class="core">
+
+        <!-- 左上角标志 -->
+        <img src="img/logo.png" class="logo" />
+
+        <!-- 右上角菜单按钮 -->
+        <!-- <img id="menu_open" class="menu menu-blink" src="img/menu2.png" style="height:6%;" data-intro="点击菜单，查看更多。 →"            data-position="left" data-step="1" data-tooltipClass="tooltip-step-1" /> -->
+        <div class="menu">
+            <div class="menu-item" style="left: 0%;" onclick="HRef('about.html')">
+                <span style="display: table-cell; vertical-align: middle;">载乐俑</span>
+            </div>
+            <div class="menu-item" style="left: 25%;" onclick="HRef('album.html')">
+                <span style="display: table-cell; vertical-align: middle;">唐乐库</span>
+            </div>
+            <div class="menu-item" style="left: 50%;" onclick="HRef('message.html')">
+                <span style="display: table-cell; vertical-align: middle;">致唐朝</span>
+            </div>
+            <div class="menu-item" style="left: 75%;" onclick="HRef('addition.html')">
+                <span style="display: table-cell; vertical-align: middle;">关于我</span>
+            </div>
+        </div>
+
+        <!-- 标题部分 -->
+        <div class="header" id="itemName">
+            <p style="display: table-cell; vertical-align: middle;">「载乐俑」</p>
+        </div>
+
+        <!-- 主图片展示区域 -->
+        <div class="main-picture-part" id="mainpic" data-intro="左右滑动或点击，给您一个更好的视角。<br>↓" data-position="top" data-step="2"
+            data-tooltipClass="tooltip-step-2">
+
+            <!-- 主图片展示 -->
+            <img id="id_pic" src="img/1.png" class="main-pic" alt="" usemap="#map1" />
+            <span id="hint_pic" class="hint">图中3D载乐俑系仿品扫描</span>
+            <img id="nav-left" src="img/nav-left.png" class="main-pic-nav-left nav-move-left" />
+            <img id="nav-right" src="img/nav-right.png" class="main-pic-nav-right nav-move-right" />
+        </div>
+        <!-- 细节展示区域 -->
+        <div class="detail-part" id="detail_prt">
+
+            <!-- 细节图片展示区域 -->
+            <div class="detail-picture">
+                <img src="img/guanzi.png" id="dtl-picture" class="detail-pic-img" />
+            </div>
+
+            <!-- 细节内容展示区域 -->
+            <div class="detail-content">
+                <p id="detail-title"></p>
+                <p id="detail-txt"></p>
+            </div>
+
+        </div>
+
+        <!-- 轮播图展示区域 -->
+        <div class="dock">
+
+            <!-- 轮播图容器 -->
+            <div class="swiper-container" dir="rtl" id="dock-swiper" data-intro="点击人偶，了解来自大唐的神秘乐器。<br>↓" data-position="top"
+                data-step="3" data-tooltipClass="tooltip-step-3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="slide6">
+                        <img src="img/yong6.png" data-swiper-parallax="0" data-swiper-parallax-scale="0.9" />
+                    </div>
+                    <div class="swiper-slide" id="slide7">
+                        <img src="img/yong7.png" data-swiper-parallax="0" data-swiper-parallax-scale="0.9" />
+                    </div>
+                    <div class="swiper-slide" id="slide1">
+                        <img src="img/yong1.png" data-swiper-parallax="0" data-swiper-parallax-scale="0.9" />
+                    </div>
+                    <div class="swiper-slide" id="slide2">
+                        <img src="img/yong2.png" data-swiper-parallax="0" data-swiper-parallax-scale="0.9" />
+                    </div>
+                    <div class="swiper-slide" id="slide3">
+                        <img src="img/yong3.png" data-swiper-parallax="0" data-swiper-parallax-scale="0.9" />
+                    </div>
+                    <div class="swiper-slide" id="slide4">
+                        <img src="img/yong4.png" data-swiper-parallax="0" data-swiper-parallax-scale="0.9" />
+                    </div>
+                    <div class="swiper-slide" id="slide5">
+                        <img src="img/yong5.png" data-swiper-parallax="0" data-swiper-parallax-scale="0.9" />
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="pag">
+    
+                    <img src="img/tri.png" />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 用于播放音乐的隐藏区域 -->
+    <!-- 音乐的播放由轮播图中的点击区域和按钮实现 -->
+    <div id="voice"></div>
+
+    <script src="js/intro.min.js"></script>
+
+    <!-- 轮播图 JS -->
+    <script src="js/dist/swiper.min.js"></script>
+
+    <!-- 图片缩放 JS -->
+    <script src="js/ImgZoom.js"></script>
+
+    <script src="js/pinchzoom.js"></script>
+
+    <!-- 内置JS -->
+    <script type="text/javascript">
+        function HRef(addr) {
+            //跳转到页面 addr
+            window.location.href = addr;
+        }
+
+        
+
+        var pre = 0;
+
+        function changeContent(pos, able = false) {
+            switch (pos) {
+                case 1:
+                    $("#dtl-picture").attr("src", "img/sheng.png");
+                    $("#detail-title").text("「笙」");
+                    $("#detail-txt").text("中原乐器 自周以来存在至今，19世纪下半叶传到欧洲对风琴等乐器有所影响。");
+                    if (able) {
+                        play("audio/06sheng.mp3");
+                    }
+                    break;
+                case 2:
+                    $("#dtl-picture").attr("src", "img/pipa.png");
+                    $("#detail-title").text("「琵琶」");
+                    $("#detail-txt").text("自汉代传入的波斯乐器，西汉文献有记载。这一件是四弦曲项琵琶。");
+                    if (able) {
+                        play("audio/03pipa.mp3");
+                    }
+                    break;
+                case 3:
+                    $("#dtl-picture").attr("src", "img/hengdi.png");
+                    $("#detail-title").text("「横笛」");
+                    $("#detail-txt").text("其来自中原还是西域目前仍有争议。");
+                    if (able) {
+                        play("audio/05hengdi.mp3");
+                    }
+                    break;
+                case 4:
+                    $("#dtl-picture").attr("src", "img/paixiao.png");
+                    $("#detail-title").text("「排箫（之一）」");
+                    $("#detail-txt").text("来自西域，为竹子制成。 \n 中原乐器，宫廷中用使用。");
+                    if (able) {
+                        play("audio/02paixiao.mp3");
+                    }
+                    break;
+                case 5:
+                    $("#dtl-picture").attr("src", "img/konghou.png");
+                    $("#detail-title").text("「小箜篌」");
+                    $("#detail-txt").text("汉代时自波斯传入，在宫廷雅乐中一直存在。");
+                    if (able) {
+                        play("audio/01konghou.mp3");
+                    }
+                    break;
+                case 6:
+                    $("#dtl-picture").attr("src", "img/guanzi.png");
+                    $("#detail-title").text("「管子」");
+                    $("#detail-txt").text("古称筚篥，汉代自龟兹传来，音色雄厚，常用于表现边塞离别的之情。今民乐管弦乐队仍有使用。");
+                    if (able) {
+                        play("audio/04guanzi.mp3");
+                    }
+                    break;
+                case 7:
+                    $("#dtl-picture").attr("src", "img/paixiao2.png");
+                    $("#detail-title").text("「排箫（之二）」");
+                    $("#detail-txt").text("来自西域，为竹子制成。 \n 中原乐器，宫廷中用使用。");
+                    if (able) {
+                        play("audio/07zhuguan.mp3");
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        var scaled = false;
+
+        function showDetail(partern, pos = 0) {
+
+
+            if (partern) {
+                $("#itemName").fadeOut();
+                $("#nav-left").fadeOut();
+                $("#nav-right").fadeOut();
+                $("#hint_pic").fadeOut("normal", function () {
+
+                    $("#id_pic").removeClass("mainpic-transform-reset");
+                    $("#id_pic").addClass("mainpic-transform");
+                    scaled = true;
+                    changeContent(pos, true);
+                    $("#detail_prt").addClass("detail-part-show");
+                    $("#detail_prt").fadeIn(1000);
+                });
+                // $("#detail_prt").fadeOut(500);
+                // setTimeout("changeContent("+pos+")",500);
+                // setTimeout(() => {
+                // }, 500);
+            } else {
+                $("#detail_prt").fadeOut(500, function () {
+
+                    $("#id_pic").addClass("mainpic-transform-reset");
+                    $("#id_pic").removeClass("mainpic-transform");
+                    $("#detail_prt").removeClass("detail-part-show");
+                    scaled = false;
+                    $("#itemName").fadeIn();
+
+                    $("#hint_pic").fadeIn();
+                    $("#nav-left").fadeIn();
+                    $("#nav-right").fadeIn();
+                    stop();
+                });
+            }
+
+        }
+
+        let element = this;
+        var flag = -1;
+        var pre = null;
+
+        /**
+         * 初始化轮播图，同时配置轮播图
+         */
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 5,
+            parallax: true,
+            loop: true,
+            slideToClickedSlide: true,
+            centeredSlides: !0,
+            watchSlidesProgress: !0,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 7,
+                },
+                768: {
+                    slidesPerView: 5,
+                },
+                640: {
+                    slidesPerView: 5,
+                },
+                320: {
+                    slidesPerView: 5,
+                }
+            },
+            on: {
+                progress: function () {
+                    var b, c, d;
+                    for (b = 0; b < this.slides.length; b++) {
+                        c = this.slides[b];
+                        d = c.progress;
+                        this.zoom.scale = Math.min(Math.abs(.2 * d), 1);
+                        es = c.style;
+                        es.opacity = Math.max(1 - Math.min(Math.abs(d / 2.2), 1), 0.05); //opacity控制左右图片的透明度
+                        es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform =
+                            es.transform = "translate3d(0px,0," + -Math.abs(150 * d) + "px)"; //150d控制左右图片的距离
+                    }
+                },
+
+                setTransition: function (b) {
+                    //自定义事件 
+                    for (var c = 0; c < this.slides.length; c++) es = this.slides[c].style,
+                        es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration =
+                        es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = b +
+                        "ms"
+                },
+
+                click: function (e) {
+                    var mp = -1;
+                    if (pre == null) {
+
+                        switch (e.target.parentNode.id) {
+                            case "slide1":
+                                showDetail(true, 1);
+                                mp = 9;
+                                break;
+                            case "slide2":
+                                showDetail(true, 2);
+                                mp = 12;
+                                break;
+                            case "slide3":
+                                showDetail(true, 3);
+                                mp = 15;
+                                break;
+                            case "slide4":
+                                showDetail(true, 4);
+                                mp = 18;
+                                break;
+                            case "slide5":
+                                showDetail(true, 5);
+                                mp = 22;
+                                break;
+                            case "slide6":
+                                showDetail(true, 6);
+                                mp = 1;
+                                break;
+                            case "slide7":
+                                showDetail(true, 7);
+                                mp = 3;
+                                break;
+                            default:
+                                return;
+                                break;
+                        }
+                        pre = e.target.parentNode.id;
+                        flag = mp;
+                        $("#id_pic").attr("src", "img/" + mp.toString() + ".png");
+                    } else {
+                        if (pre == e.target.parentNode.id) {
+                            showDetail(false);
+                            pre = null;
+                        } else {
+                            switch (e.target.parentNode.id) {
+                                case "slide1":
+                                    showDetail(true, 1);
+                                    mp = 9;
+                                    break;
+                                case "slide2":
+                                    showDetail(true, 2);
+                                    mp = 12;
+                                    break;
+                                case "slide3":
+                                    showDetail(true, 3);
+                                    mp = 15;
+                                    break;
+                                case "slide4":
+                                    showDetail(true, 4);
+                                    mp = 18;
+                                    break;
+                                case "slide5":
+                                    showDetail(true, 5);
+                                    mp = 22;
+                                    break;
+                                case "slide6":
+                                    showDetail(true, 6);
+                                    mp = 1;
+                                    break;
+                                case "slide7":
+                                    showDetail(true, 7);
+                                    mp = 3;
+                                    break;
+                                default:
+                                    return;
+                                    break;
+                            }
+                            pre = e.target.parentNode.id;
+                            flag = mp;
+                            $("#id_pic").attr("src", "img/" + mp.toString() + ".png");
+                        }
+                    }
+                    console.log(pre);
+                },
+
+                touchEnd: function (e) {
+                    var mp = -1;
+                    console.log(this.realIndex);
+                    switch (this.realIndex) {
+                        case 0:
+                            mp = 1;
+                            break;
+                        case 1:
+                            mp = 3;
+                            break;
+                        case 2:
+                            mp = 9;
+                            break;
+                        case 3:
+                            mp = 12;
+                            break;
+                        case 4:
+                            mp = 15;
+                            break;
+                        case 5:
+                            mp = 18;
+                            break;
+                        case 6:
+                            mp = 22;
+                            break;
+
+                        default:
+                            return;
+                            break;
+                    }
+                    flag = mp;
+                    $("#id_pic").attr("src", "img/" + mp.toString() + ".png");
+                },
+
+                slideChange: function () {
+                    var p = -1;
+                    switch (this.realIndex) {
+                        case 0:
+                            p = 6;
+                            break;
+                        case 1:
+                            p = 7;
+                            break;
+                        case 2:
+                            p = 1;
+                            break;
+                        case 3:
+                            p = 2;
+                            break;
+                        case 4:
+                            p = 3;
+                            break;
+                        case 5:
+                            p = 4;
+                            break;
+                        case 6:
+                            p = 5;
+                            break;
+
+                        default:
+                            return;
+                            break;
+                    }
+                    if (!scaled) {
+                        changeContent(p);
+                    }
+                },
+            },
+        });
+
+        function slideToPic(flag) {
+            var aimPic = -1;
+            // 识别当前flag
+            switch (flag) {
+                // 当flag识别为24、1和2，跳转人偶6	
+                case 24:
+                    aimPic = 6;
+                    break;
+                case 1:
+                    aimPic = 6;
+                    break;
+                case 2:
+                    aimPic = 6;
+                    break;
+
+                    // 当flag识别为3到5，跳转人偶7	
+                case 3:
+                    aimPic = 7;
+                    break;
+                case 4:
+                    aimPic = 7;
+                    break;
+                case 5:
+                    aimPic = 7;
+                    break;
+
+                    // 当flag识别为6到9，跳转人偶1	
+                case 6:
+                    aimPic = 1;
+                    break;
+                case 7:
+                    aimPic = 1;
+                    break;
+                case 8:
+                    aimPic = 1;
+                    break;
+                case 9:
+                    aimPic = 1;
+                    break;
+
+                    // 当flag识别为10到13，跳转人偶2	
+                case 10:
+                    aimPic = 2;
+                    break;
+                case 11:
+                    aimPic = 2;
+                    break;
+                case 12:
+                    aimPic = 2;
+                    break;
+                case 13:
+                    aimPic = 2;
+                    break;
+
+                    // 当flag识别为14到16，跳转人偶3
+                case 14:
+                    aimPic = 3;
+                    break;
+                case 15:
+                    aimPic = 3;
+                    break;
+                case 16:
+                    aimPic = 3;
+                    break;
+
+                    // 当flag识别为17到20，跳转人偶4		
+                case 17:
+                    aimPic = 4;
+                    break;
+                case 18:
+                    aimPic = 4;
+                    break;
+                case 19:
+                    aimPic = 4;
+                    break;
+                case 20:
+                    aimPic = 4;
+                    break;
+
+                    // 当flag识别为21到23，跳转人偶5	
+                case 21:
+                    aimPic = 5;
+                    break;
+                case 22:
+                    aimPic = 5;
+                    break;
+                case 23:
+                    aimPic = 5;
+                    break;
+
+                    // 其余的不跳转
+                default:
+                    return;
+                    break;
+            }
+            swiper.slideToLoop((aimPic + 1) % 7);
+        }
+        /**
+         * 为主图片添加滑动响应事件
+         * 设置变量 flag追踪图片编号
+         * cnt 为监听到滑动的次数
+         */
+        if (flag < 0) {
+            flag = 1;
+        }
+        var cnt = 0;
+        var swipe = false;
+        var timeout = null;
+        var longpress = false;
+
+        /*
+         * 每次滑动可以多次改变图，即可以连续转动，当手指离开屏幕时停止
+         */
+
+        // 响应触控开始事件，记录当前的坐标值：startX和startY
+        $("#id_pic").on("touchstart", function (e) {
+            e.preventDefault();
+            startX = e.originalEvent.changedTouches[0].pageX;
+            startY = e.originalEvent.changedTouches[0].pageY;
+            swipe = false;
+
+            if (!scaled) {
+
+                timeout = setTimeout(() => {
+                    longpress = true;
+                    $("#nav-left").fadeOut();
+                    $("#nav-right").fadeOut();
+                    // $("#hint_pic").fadeOut();
+                }, 300);
+            }
+        });
+
+        // 响应触控滑动事件，记录移动后停止的坐标值：moveX和moveY
+        $("#id_pic").on("touchmove", function (e) {
+            e.preventDefault();
+            moveEndX = e.originalEvent.changedTouches[0].pageX;
+            moveEndY = e.originalEvent.changedTouches[0].pageY;
+            swipe = true;
+
+            // 计算水平位移以及垂直位移
+            X = moveEndX - startX;
+            Y = moveEndY - startY;
+
+            // 每次监听到时间并且完成对位移的计算后，重置起始位置
+            startX = moveEndX;
+            startY = moveEndY;
+
+            // 对响应次数进行叠加
+            cnt++;
+
+            // 对滑动的方向进行判断
+            if (Math.abs(X) > Math.abs(Y) && Math.abs(X) > 0 && X > 0 && cnt > 3) {
+                // 如果水平位移量大于垂直位移量，位移量大于30，以及水平位移大于0，那么此滑动为向右滑动，当监听到滑动次数大于5时候响应改变
+                swipe = true;
+
+                if (flag < 24) {
+
+                    // 向右滑动计数加1
+                    flag++;
+
+                    // 根据flag，更改图片
+                    $("#id_pic").attr("src", "img/" + flag.toString() + ".png");
+                    $("#id_pic").attr("usemap", "#map" + flag.toString());
+
+                    // 根据flag，轮播图进行跳转
+                    // slideToPic(flag);
+
+                } else {
+
+                    // 当flag大于等于24则从1开始重新递增计数
+                    flag = 1;
+
+                    // 根据flag，更改图片
+                    $("#id_pic").attr("src", "img/" + flag.toString() + ".png");
+                    $("#id_pic").attr("usemap", "#map" + flag.toString());
+
+                    // 根据flag，轮播图进行跳转
+                    // slideToPic(flag);
+                }
+
+                // 当发生相应时，响应结束后对计数变量 cnt 重置为0
+                cnt = 0;
+
+            } else if (Math.abs(X) > Math.abs(Y) && Math.abs(X) > 0 && X < 0 && cnt > 3) {
+                // 如果水平位移量大于垂直位移量，位移量大于30，以及水平位移小于0，那么此滑动为向左滑动，当监听到滑动次数大于5时候响应改变
+                swipe = true;
+
+                if (flag > 1) {
+
+                    // 向左滑动计数减1
+                    flag--;
+
+                    // 根据flag，更改图片
+                    $("#id_pic").attr("src", "img/" + flag.toString() + ".png");
+                    $("#id_pic").attr("usemap", "#map" + flag.toString());
+
+                    // 根据flag，轮播图进行跳转
+                    // slideToPic(flag);
+
+                } else {
+
+                    // 当flag小于等于1则从24开始重新递增计数
+                    flag = 24;
+
+                    // 根据flag，更改图片
+                    $("#id_pic").attr("src", "img/" + flag.toString() + ".png");
+                    $("#id_pic").attr("usemap", "#map" + flag.toString());
+
+                    // 根据flag，轮播图进行跳转
+                    // slideToPic(flag);
+                }
+
+                // 当发生相应时，响应结束后对计数变量 cnt 重置为0
+                cnt = 0;
+
+            } else {
+                // swipe = false;
+            }
+            console.log(swipe);
+        });
+
+        // 响应触控结束事件，记录移动后停止的坐标值：moveX和moveY
+        $("#id_pic").on("touchend", function (e) {
+            e.preventDefault();
+            clearTimeout(timeout);
+            if (!scaled) {
+                $("#nav-left").fadeIn();
+            $("#nav-right").fadeIn();
+            }
+            
+            // $("#hint_pic").fadeIn();
+            moveEndX = e.originalEvent.changedTouches[0].pageX;
+            moveEndY = e.originalEvent.changedTouches[0].pageY;
+
+            // 计算水平位移以及垂直位移
+            X = moveEndX - startX;
+            Y = moveEndY - startY;
+
+            // 根据flag，轮播图进行跳转
+            slideToPic(flag);
+
+            
+
+            if (!swipe) {
+                if (scaled) {
+                    // $("#detail_prt").fadeOut(500);
+                    // $("#id_pic").addClass("mainpic-transform-reset");
+                    // $("#id_pic").removeClass("mainpic-transform");
+                    // scaled = false;
+                    // $("#itemName").fadeIn();
+                    // $("#hint_pic").fadeIn();
+                    // stop();
+                    // pre = 0;
+                    showDetail(false);
+                    
+
+                } else {
+                    if (!longpress) {
+
+                        $(id_pic).ImgZoomIn();
+                        $('div.pinch-zoom').fadeIn('fast');
+                        $('div.pinch-zoom').each(function () {
+                            new RTP.PinchZoom($(this), {});
+                        });
+                    }
+                }
+            }
+            longpress = false;
+        });
+
+        $(document).on('touchend', '#ImgZoomInBG', function (t) {
+            $('#ImgZoomInImage').fadeOut('fast');
+            $('#ImgZoomInBG').fadeOut('fast', function () {
+                $('#ImgZoomInImage').remove();
+                $('#ImgZoomInBG').remove();
+            });
+            t.preventDefault();
+        });
+
+        $("#closeZoom").click(function (t) {
+            console.log("close");
+            $('#ImgZoomInImage').hide();
+            $('#ImgZoomInBG').hide(0, function () {
+                $('#ImgZoomInImage').remove();
+                $('#ImgZoomInBG').remove();
+            });
+            t.preventDefault();
+        });
+        // $(document).on('touchend', '#ImgZoomInImage', function (t) {
+        //     $('#ImgZoomInImage').hide();
+        //     $('#ImgZoomInBG').hide();
+        //     t.preventDefault();
+        // });
+
+        function play(file) {
+            if (file != 'null') { //除第一张图外
+                //播放音乐
+                document.getElementById("voice").innerHTML =
+                    '<audio controls="controls" autoplay="autoplay" id="audio_player" style="display:none"> <source src="' +
+                    file +
+                    '" > </audio>';
+
+                // 让控制播放的蒙版消失
+                // document.getElementById("ctrl").style.display = "none"
+            }
+        }
+
+        //控制音乐暂停
+        function stop() {
+            var music = document.getElementById("audio_player");
+
+            if (music != null) {
+                if (music.paused) {
+
+                } else {
+                    music.pause();
+                }
+            }
+
+        }
+
+        function checkCookie(name, value) {
+            var cname = getCookie(name)
+            if (cname != null && cname != "") {
+                $("#menu_open").removeClass("menu-blink");
+            } else {
+                setCookie(name, value, 1);
+
+                // introJs().setOptions({
+                //     showBullets: false,
+                //     showStepNumbers: false,
+                //     highlightClass: "intro-help-layer",
+                //     overlayOpacity: "1",
+                //     nextLabel: "继续",
+                //     prevLabel: "上一个",
+                //     skipLabel: "跳过",
+                //     doneLabel: "完成",
+                //     disableInteraction: true,
+                //     hidePrev: true,
+                //     hideNext: true,
+                // }).start().refresh();
+
+                // var steps = introJs();
+
+                // steps.setOptions({
+                //     showBullets: false,
+                //     showStepNumbers: false,
+                //     highlightClass: "intro-help-layer",
+                //     tooltipClass: "intro-tooltip",
+                //     overlayOpacity: "1",
+                //     nextLabel: "继续",
+                //     prevLabel: "上一个",
+                //     skipLabel: "跳过",
+                //     doneLabel: "完成",
+                //     disableInteraction: true,
+                //     hidePrev: true,
+                //     hideNext: true,
+                //     showButtons: false,
+                //     exitOnOverlayClick: false,
+                // }).start().refresh();
+
+                // console.log(steps);
+                // // steps.nextStep();
+
+                // $(".introjs-overlay").click(function (event) {
+                //     steps.nextStep();
+                // })
+                // $(".introjs-helperLayer").click(function (event) {
+                //     steps.nextStep();
+                // })
+                // $(".introjs-tooltipReferenceLayer").click(function (event) {
+                //     steps.nextStep();
+                // })
+
+                // steps.oncomplete(function () {
+                //     console.log("complete");
+                //     steps.exit()
+                // })
+            }
+        }
+
+        $(document).ready(function () {
+
+            $(".logo").fadeIn(1500);
+            $(".menu").slideToggle(1500);
+            // $(".header").fadeOut(500);
+            // $(".header").fadeIn(1500);
+            $(".main-pic").fadeIn(1500, function () {
+
+                $("#nav-left").fadeIn();
+                $("#nav-right").fadeIn();
+                $("#hint_pic").fadeIn();
+            });
+            setTimeout(() => {
+                // $(".header").fadeIn();
+                $("#dock-swiper").addClass("swiper-show");
+            }, 2500);
+
+            $(document).on('click', function (e) {
+                console.log(e.target);
+                if (e.target.nodeName !== "IMG" && scaled) {
+
+                    showDetail(false);
+                }
+            });
+
+            $("#dtl-picture").click(function () {
+                showDetail(false);
+            });
+
+            $("#menu_open").click(function () {
+                $("#menu_open").removeClass("menu-blink");
+                $(".menu-core").slideToggle(1500);
+                // $(".menu-core").fadeIn(1000);
+                setTimeout(() => {
+
+                    $(".menu-list").fadeIn(1500);
+                    $("#info").fadeIn(1500);
+                }, 200);
+            });
+
+            $("#crt-page").click(function (event) {
+                $(".menu-list").fadeOut(1000);
+                $(".menu-core").slideToggle(1500);
+                // $(".menu-core").fadeOut();
+                $("#info").fadeOut(1500);
+                event.stopPropagation();
+            });
+
+
+            $(".menu-core").click(function (event) {
+                $(".menu-list").fadeOut(1000);
+                $(".menu-core").slideToggle(1500);
+                // $(".menu-core").fadeOut();
+                $("#info").fadeOut(1500);
+                event.stopPropagation();
+            });
+
+            checkCookie("status", "visiting");
+        });
+
+        $(function () {
+            if (window.history && window.history.pushState) {
+                $(window).on('popstate', function () {
+                    window.history.pushState('forward', null, '#');
+                    window.history.forward(1);
+                });
+            }
+            window.history.pushState('forward', null, '#'); //在IE中必须得有这两行
+            window.history.forward(1);
+        });
+    </script>
+</body>
+
+</html>

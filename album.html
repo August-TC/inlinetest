@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>唐三彩载乐俑</title>
+
+    <style>
+        @font-face {
+
+            /* 方正宋三简体 */
+            font-family: 'SongSanJian';
+            src: url("font/FangZheng-SongSanJian.ttf");
+        }
+
+        @font-face {
+
+            /* 文悦古典明朝体 */
+            font-family: 'WenyueGUDIAN';
+            src: url("font/WenYue-GuDianMingChaoTi-NC-W5.otf");
+        }
+
+        html,
+        body {
+
+            /* 主体布局大小 */
+            height: 100%;
+            width: 100%;
+
+            /* 主体布局位置 */
+            margin: 0px auto;
+        }
+
+        body {
+
+            /* 主题默认样式 */
+            font-family: SongSanJian, Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: gray;
+
+            /* 主体布局位置 */
+            margin: 0px auto;
+            overflow: hidden;
+            /* 禁用滚动 */
+        }
+
+        /* 右上角菜单按钮 样式 */
+        .menu {
+
+            width: 33%;
+            height: 11%;
+            position: absolute;
+            z-index: 50;
+            top: 0px;
+            right: 6%;
+            padding: 0px;
+            /* background: yellow; */
+            opacity: 0.6;
+            
+            display: none;
+        }
+
+        /* 内容页面 样式 */
+        .menu-core {
+            display: none;
+            /* 内容页面大小 */
+            width: 100%;
+            height: 100%;
+
+            /* 内容页面布局位置 */
+            position: absolute;
+            z-index: 75;
+            top: 0%;
+            margin: 0px auto;
+
+            /* 内容页面背景设置 */
+            background: url(img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            -webkit-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            background-attachment: fixed;
+
+            /* 内部元素对齐方式 */
+            vertical-align: middle;
+        }
+
+        /* 选项列表 样式 */
+        .menu-list {
+
+            /* 选项列表大小 */
+            width: 72%;
+            height: 50%;
+
+            /* 选项列表布局位置 */
+            margin: 0px auto;
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            margin-left: -36%;
+
+            display: none;
+
+        }
+
+        /* 单个选项 样式*/
+        .menu-item {
+            width: 25%;
+            height: 100%;
+
+            position: absolute;
+            top: 0%;
+
+            /* 单个选项内部元素对齐方式：水平垂直居中 */
+            display: table;
+            text-align: center;
+
+            background: url(img/menu_item.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            -webkit-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+
+            /* 单个选项文字字体设置 */
+            font-family: WenyueGUDIAN;
+
+            text-align: center;
+            writing-mode: vertical-rl;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: vertical-rl;
+
+            font-size: 2.3vh;
+            color: rgba(0, 0, 0, 0.9);
+
+            -webkit-filter: brightness(120%); /* Chrome, Safari, Opera */
+            filter: brightness(120%);
+        }
+
+        /* 内容页面 样式 */
+        .core {
+
+            /* 内容页面大小 */
+            width: 100%;
+            height: 100%;
+
+            /* 内容页面布局位置 */
+            margin: 0px auto;
+
+            /* 内容页面背景设置 */
+            background: url(img/bg.jpg);
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+
+            /* 内部元素对齐方式 */
+            vertical-align: middle;
+        }
+
+        /* 左上角标志 样式 */
+        .logo {
+
+            /* 标志大小 */
+            height: 6.75%;
+
+            /* 标志布局位置 */
+            margin-top: 5%;
+            margin-left: 6%;
+
+            position: absolute;
+            z-index: 100;
+        }
+
+        /*标题 样式*/
+        .title {
+            text-align: center;
+            font-family: WenyueGUDIAN;
+            color: gray;
+            font-size: 7vw;
+            /* margin-top: 30%; */
+            position: absolute;
+            top: 13%;
+            bottom: 80%;
+            width: 100%;
+        }
+
+        /* 页脚 样式 */
+        .footer {
+
+            /* 页脚区域大小 */
+            width: 90%;
+
+            /* 页脚布局位置 */
+            position: absolute;
+            left: 50%;
+            bottom: 3%;
+            margin-left: -45%;
+
+            /* 页脚文字字体 */
+            color: gray;
+            font-size: 3vw;
+        }
+
+        .lists{
+            color: gray;
+            font-size: 5vw;
+            width: 70%;
+            left: 50%;
+            margin-left: -35%;
+            
+            bottom: 0;
+            top: 55%; 
+            position: absolute;
+            overflow: auto;
+        }
+
+        .songlist {
+            height: 34px;
+            width: 100%;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .lpic1 {
+            height: 100%;
+            width: 15%;
+            float: left;
+            text-align: center;
+        }
+
+        .ltitle {
+            float: left;
+            width: 70%;
+            height: 100%;
+            display:block;
+            line-height: 34px;
+        }
+
+        .lpic2 {
+            width: 15%;
+            float: right;
+            height: 100%;
+            text-align: center;
+            
+        }
+        .list{
+            height: 28px;
+        }
+
+        .line {
+            width: 100%;
+            /*position: absolute;*/
+            height: 6px;
+            text-align: center;
+            
+        }
+
+        .bandpic {
+            width: 80%;
+            bottom: 50%;
+            top: 20%;
+            left: 50%;
+            position: absolute;
+            text-align: center;
+            margin-left: -40%;
+        }
+    </style>
+
+    <!-- jQuery js库 -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="menu-core">
+
+        <!-- 右上角关闭菜单按钮 -->
+        <img id="menu_return" class="menu" src="img/return.png" style="z-index:100;" />
+
+        <div class="menu-list">
+            <div class="menu-item" onclick="HRef('content.html')">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 19%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle; z-index: 200;">「壹」主界面</p>
+            </div>
+            <div class="menu-item" onclick="HRef('about.html')">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 39%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle;">「贰」关于载乐俑</p>
+            </div>
+            <div class="menu-item" id="crt-page">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 59%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle;">「叁」大唐乐库</p>
+            </div>
+            <div class="menu-item" onclick="HRef('message.html')">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 79%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle;">「肆」给唐朝留言</p>
+            </div>
+            <div class="menu-item" onclick="HRef('addition.html')">
+                <img src="img/underline.png" style="position: absolute; width: 100%; top: 99%; left: 0px;" />
+                <p style="display: table-cell; vertical-align: middle;">「伍」关于我们</p>
+            </div>
+        </div>
+
+        <!-- 页脚：团队信息 -->
+        <div class="footer">
+            <!-- <div id="info" style="text-align: center; display: none;">新华社陕西分社&nbsp;西北工业大学新媒体团队&nbsp;&nbsp;联合出品</div> -->
+        </div>
+
+    </div>
+
+    <!-- 内容页面 -->
+    <div class="core">
+
+        <!-- 左上角标志 -->
+        <img src="img/logo.png" class="logo" />
+
+        <!-- 右上角菜单按钮 -->
+        <!-- <img id="menu_open" class="menu" src="img/menu2.png" style="height:6%;" /> -->
+        <div class="menu">
+            <!-- <div class="menu-item" style="left: 0%;" onclick="HRef('content.html')">
+                <span style="display: table-cell; vertical-align: middle;">主界面</span>
+            </div>
+            <div class="menu-item" style="left: 25%;" onclick="HRef('album.html')">
+                <span style="display: table-cell; vertical-align: middle;">唐乐库</span>
+            </div>
+            <div class="menu-item" style="left: 50%;" onclick="HRef('message.html')">
+                <span style="display: table-cell; vertical-align: middle;">致唐朝</span>
+            </div> -->
+            <div class="menu-item" style="left: 75%;" onclick="HRef('content.html')">
+                <span style="display: table-cell; vertical-align: middle;">返&nbsp;&nbsp;回</span>
+            </div>
+        </div>
+
+        <!-- 其他内容 -->
+
+        <div class="title">大唐乐队的"主打歌"</div>
+        <div class="bandpic">
+            <img src="img/band.png" height="100%" />
+        </div>
+        <div class="lists">
+            <div class="songlist">
+                <div class="list">
+                    <span class="lpic1"><img style="height: 100%;" src="img/yong2.png" /></span>
+                    <span class="ltitle">
+                        &nbsp;&nbsp;琵琶：寒鸦戏水
+                    </span>
+                    <span class="lpic2" onclick="playvoice(1)"><img id="v1" style="height: 100%;" src="img/play.png" /></span>
+                </div>
+                <img style="width: 100%;" src="img/underline.png" />
+            </div>
+            <div class="songlist">
+                <div class="list">
+                    <span class="lpic1"><img style="height: 100%;" src="img/yong1.png" /></span>
+                    <span class="ltitle">
+                        &nbsp;&nbsp;筚篥：边塞之风
+                    </span>
+                    <span class="lpic2" onclick="playvoice(2)"><img id="v2" style="height: 100%;" src="img/play.png" /></span>
+                </div>
+                <img style="width: 100%;" src="img/underline.png" />
+            </div>
+            <div class="songlist">
+                <div class="list">
+                    <span class="lpic1"><img style="height: 100%;" src="img/yong7.png" /></span>
+                    <span class="ltitle">
+                        &nbsp;&nbsp;排箫：夏之韵
+                    </span>
+                    <span class="lpic2" onclick="playvoice(3)"><img id="v3" style="height: 100%;" src="img/play.png" /></span>
+                </div>
+                <img style="width: 100%;" src="img/underline.png" />
+            </div>
+        </div>
+        <audio id="voice" src=""></audio>
+
+
+        <!-- 页脚：团队信息 -->
+        <div class="footer">
+            <!-- <div style="text-align: center">新华社陕西分社&nbsp;西北工业大学新媒体团队&nbsp;&nbsp;联合出品</div> -->
+        </div>
+
+    </div>
+    <script>
+        function HRef(addr) {
+            //跳转到页面 addr
+            window.location.href = addr;
+        }
+
+        var v = [0, 0, 0, 0];
+        var audio = document.getElementById("voice");
+
+        audio.addEventListener('ended', function () {
+            document.getElementById("v1").src = "img/play.png";
+            document.getElementById("v2").src = "img/play.png";
+            document.getElementById("v3").src = "img/play.png";
+        }, false);
+
+        function playvoice(flag) {
+
+            if (v[flag] == 1) {
+                audio.pause();
+                v[flag] = 2;
+                document.getElementById("v" + flag.toString()).src = "img/play.png";
+            } else if (v[flag] == 0) {
+                switch (flag) {
+                    case 1:
+                        audio.src = "audio/album1.mp3";
+                        break;
+                    case 2:
+                        audio.src = "audio/album2.wav";
+                        break;
+                    case 3:
+                        audio.src = "audio/album3.mp3";
+                        break;
+                }
+                audio.play();
+                document.getElementById("v" + flag.toString()).src = "img/stop.png";
+                v[flag] = 1;
+            } else {
+                audio.play();
+                document.getElementById("v" + flag.toString()).src = "img/stop.png";
+                v[flag] = 1;
+            }
+
+            for (i = 1; i <= 3; i++) {
+                if (i != flag) {
+                    v[i] = 0;
+                    document.getElementById("v" + i.toString()).src = "img/play.png";
+                }
+            }
+        }
+
+        $(document).ready(function () {
+
+            $(".logo").fadeIn(1500);
+            $(".menu").slideToggle(1500);
+
+            $("#menu_open").click(function () {
+                $(".menu-core").slideToggle(1500);
+                // $(".menu-core").fadeIn(1000);
+                setTimeout(() => {
+
+                    $(".menu-list").fadeIn(1500);
+                    $("#info").fadeIn(1500);
+                }, 200);
+            });
+
+            $("#crt-page").click(function (event) {
+                $(".menu-list").fadeOut(1000);
+                $(".menu-core").slideToggle(1500);
+                // $(".menu-core").fadeOut();
+                $("#info").fadeOut(1500);
+                event.stopPropagation();
+            });
+
+
+            $(".menu-core").click(function (event) {
+                $(".menu-list").fadeOut(1000);
+                $(".menu-core").slideToggle(1500);
+                // $(".menu-core").fadeOut();
+                $("#info").fadeOut(1500);
+                event.stopPropagation();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
