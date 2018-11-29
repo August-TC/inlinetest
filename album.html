@@ -106,36 +106,50 @@
 
         /* 单个选项 样式*/
         .menu-item {
-            width: 25%;
-            height: 100%;
+	width: 25%;
+	height: 100%;
 
-            position: absolute;
-            top: 0%;
+	position: absolute;
+	top: 0%;
+	
+	background: url(../img/menu_item.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	
+	/* 单个选项文字字体设置 */
+	font-family: WenyueGUDIAN;
+	
+	font-size: 2.3vh;
+	color: rgba(0, 0, 0, 0.9);
+	-webkit-filter: brightness(120%);
+	/* Chrome, Safari, Opera */
+	filter: brightness(120%);
+	/* 单个选项内部元素对齐方式：水平垂直居中 */
+	display: box;
+	/* OLD - Android 4.4- */
+	display: -webkit-box;
+	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;
+	/* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;
+	/* TWEENER - IE 10 */
+	display: -webkit-flex;
+	/* NEW - Chrome */
+	display: flex;
+	/* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
 
-            /* 单个选项内部元素对齐方式：水平垂直居中 */
-            display: table;
-            text-align: center;
-
-            background: url(img/menu_item.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            -webkit-background-size: 100% 100%;
-            -o-background-size: 100% 100%;
-
-            /* 单个选项文字字体设置 */
-            font-family: WenyueGUDIAN;
-
-            text-align: center;
-            writing-mode: vertical-rl;
-            -webkit-writing-mode: vertical-rl;
-            -ms-writing-mode: vertical-rl;
-
-            font-size: 2.3vh;
-            color: rgba(0, 0, 0, 0.9);
-
-            -webkit-filter: brightness(120%); /* Chrome, Safari, Opera */
-            filter: brightness(120%);
-        }
+.menu-item span {
+	margin: auto;
+    /* -webkit-writing-mode: vertical-rl; */
+    /* writing-mode: vertical-rl; */
+    /* word-break: break-all; */
+    text-align: center;
+    /* height: 100%; */
+    width: 2.3vh;
+}
 
         /* 内容页面 样式 */
         .core {
@@ -280,7 +294,7 @@
         <img id="menu_return" class="menu" src="img/return.png" style="z-index:100;" />
 
         <div class="menu-list">
-            <div class="menu-item" onclick="HRef('content.html')">
+            <!-- <div class="menu-item" onclick="HRef('content.html')">
                 <img src="img/underline.png" style="position: absolute; width: 100%; top: 19%; left: 0px;" />
                 <p style="display: table-cell; vertical-align: middle; z-index: 200;">「壹」主界面</p>
             </div>
@@ -299,6 +313,18 @@
             <div class="menu-item" onclick="HRef('addition.html')">
                 <img src="img/underline.png" style="position: absolute; width: 100%; top: 99%; left: 0px;" />
                 <p style="display: table-cell; vertical-align: middle;">「伍」关于我们</p>
+            </div> -->
+            <div class="menu-item" style="left: 0%;" onclick="HRef('about.html')">
+                <span>载乐俑</span>
+            </div>
+            <div class="menu-item" style="left: 25%;" onclick="HRef('album.html')">
+                <span>唐乐库</span>
+            </div>
+            <div class="menu-item" style="left: 50%;" onclick="HRef('message.html')">
+                <span>致唐朝</span>
+            </div>
+            <div class="menu-item" style="left: 75%;" onclick="HRef('addition.html')">
+                <span>关于我</span>
             </div>
         </div>
 
