@@ -822,7 +822,8 @@
                     '<audio controls="controls" autoplay="autoplay" id="audio_player" style="display:none"> <source src="' +
                     file +
                     '" > </audio>';
-
+                    document.getElementById('audio_player').load();
+                    document.getElementById('audio_player').play();
                 // 让控制播放的蒙版消失
                 // document.getElementById("ctrl").style.display = "none"
             }
