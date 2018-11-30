@@ -226,7 +226,7 @@
                 audio.load()
                 audio.play();
                 // document.getElementById("v" + flag.toString()).src = "img/stop.png";
-                v[flag] = 1;
+                // v[flag] = 1;
             } else {
                 audio.play();
                 // document.getElementById("v" + flag.toString()).src = "img/stop.png";
@@ -347,16 +347,7 @@
 
             // playvoice(1);
             if (partern) {
-                $("#itemName").fadeOut();
-                $("#nav-left").fadeOut();
-                $("#nav-right").fadeOut();
-                $("#hint_pic").fadeOut("normal", function () {
-
-                    $("#id_pic").removeClass("mainpic-transform-reset");
-                    $("#id_pic").addClass("mainpic-transform");
-                    scaled = true;
-                    changeContent(pos, true);
-                    switch (pos) {
+                switch (pos) {
                         case 1:
                             playvoice(1);
                             break;
@@ -382,6 +373,16 @@
                         default:
                             break;
                     }
+                $("#itemName").fadeOut();
+                $("#nav-left").fadeOut();
+                $("#nav-right").fadeOut();
+                $("#hint_pic").fadeOut("normal", function () {
+
+                    $("#id_pic").removeClass("mainpic-transform-reset");
+                    $("#id_pic").addClass("mainpic-transform");
+                    scaled = true;
+                    changeContent(pos, true);
+                    
                     $("#detail_prt").addClass("detail-part-show");
                     $("#detail_prt").fadeIn(1000);
                 });
