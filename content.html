@@ -345,7 +345,7 @@
 
         function showDetail(partern, pos = 0) {
 
-            playvoice(1);
+            // playvoice(1);
             if (partern) {
                 $("#itemName").fadeOut();
                 $("#nav-left").fadeOut();
@@ -356,6 +356,32 @@
                     $("#id_pic").addClass("mainpic-transform");
                     scaled = true;
                     changeContent(pos, true);
+                    switch (pos) {
+                        case 1:
+                            playvoice(1);
+                            break;
+                        case 2:
+                            playvoice(2);
+                            break;
+                        case 3:
+                            playvoice(3);
+                            break;
+                        case 4:
+                            playvoice(4);
+                            break;
+                        case 5:
+                            playvoice(5);
+                            break;
+                        case 6:
+                            playvoice(6);
+                            break;
+                        case 7:
+                            playvoice(7);
+                            break;
+
+                        default:
+                            break;
+                    }
                     $("#detail_prt").addClass("detail-part-show");
                     $("#detail_prt").fadeIn(1000);
                 });
@@ -437,7 +463,7 @@
                 },
 
                 click: function (e) {
-                    
+
                     var mp = -1;
                     if (pre == null) {
 
@@ -587,7 +613,7 @@
                             break;
                     }
                     if (!scaled) {
-                        changeContent(p,false);
+                        changeContent(p, false);
                     }
                 },
             },
@@ -902,7 +928,7 @@
         //     }
         // }
 
-        
+
 
         function checkCookie(name, value) {
             var cname = getCookie(name)
@@ -968,7 +994,7 @@
 
             $(".logo").fadeIn(1500);
             $(".menu").slideToggle(1500);
-            
+
             // $(".header").fadeOut(500);
             // $(".header").fadeIn(1500);
             $(".main-pic").fadeIn(1500, function () {
