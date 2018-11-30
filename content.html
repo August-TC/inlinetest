@@ -173,7 +173,7 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="pag">
-    
+
                     <img src="img/tri.png" />
                 </div>
             </div>
@@ -203,7 +203,7 @@
             window.location.href = addr;
         }
 
-        
+
 
         var pre = 0;
 
@@ -449,6 +449,40 @@
                         }
                     }
                     console.log(pre);
+                },
+
+                touchStart: function (e) {
+                    // var mp = -1;
+                    // console.log(this.realIndex);
+                    // switch (this.realIndex) {
+                    //     case 0:
+                    //         mp = 1;
+                    //         break;
+                    //     case 1:
+                    //         mp = 3;
+                    //         break;
+                    //     case 2:
+                    //         mp = 9;
+                    //         break;
+                    //     case 3:
+                    //         mp = 12;
+                    //         break;
+                    //     case 4:
+                    //         mp = 15;
+                    //         break;
+                    //     case 5:
+                    //         mp = 18;
+                    //         break;
+                    //     case 6:
+                    //         mp = 22;
+                    //         break;
+
+                    //     default:
+                    //         return;
+                    //         break;
+                    // }
+                    // flag = mp;
+                    // $("#id_pic").attr("src", "img/" + mp.toString() + ".png");
                 },
 
                 touchEnd: function (e) {
@@ -748,9 +782,9 @@
             clearTimeout(timeout);
             if (!scaled) {
                 $("#nav-left").fadeIn();
-            $("#nav-right").fadeIn();
+                $("#nav-right").fadeIn();
             }
-            
+
             // $("#hint_pic").fadeIn();
             moveEndX = e.originalEvent.changedTouches[0].pageX;
             moveEndY = e.originalEvent.changedTouches[0].pageY;
@@ -762,7 +796,7 @@
             // 根据flag，轮播图进行跳转
             slideToPic(flag);
 
-            
+
 
             if (!swipe) {
                 if (scaled) {
@@ -775,7 +809,7 @@
                     // stop();
                     // pre = 0;
                     showDetail(false);
-                    
+
 
                 } else {
                     if (!longpress) {
@@ -822,12 +856,14 @@
                     '<audio controls="controls" autoplay="autoplay" id="audio_player" style="display:none"> <source src="' +
                     file +
                     '" > </audio>';
-                    document.getElementById('audio_player').load();
+                document.getElementById("dock-swiper").addEventListener("click", function () {
                     document.getElementById('audio_player').play();
+                }, false);
                 // 让控制播放的蒙版消失
                 // document.getElementById("ctrl").style.display = "none"
             }
         }
+
 
         //控制音乐暂停
         function stop() {
