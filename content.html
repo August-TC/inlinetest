@@ -158,7 +158,7 @@
 
     <!-- 用于播放音乐的隐藏区域 -->
     <!-- 音乐的播放由轮播图中的点击区域和按钮实现 -->
-    <audio id="voice" src=""></audio>
+    <audio id="voice" src="" autoplay></audio>
     <!-- <div id="voice">
         <audio controls="controls" id="audio_player1" style="display:none">
             <source src="audio/06sheng.mp3" /> </audio>
@@ -889,20 +889,20 @@
         //     t.preventDefault();
         // });
 
-        function play(file) {
-            if (file != 'null') { //除第一张图外
-                //播放音乐
-                document.getElementById("voice").innerHTML =
-                    '<audio controls="controls" autoplay="autoplay" id="audio_player" style="display:none"> <source src="' +
-                    file +
-                    '" > </audio>';
-                document.getElementById("dock-swiper").addEventListener("click", function () {
-                    document.getElementById('audio_player').play();
-                }, false);
-                // 让控制播放的蒙版消失
-                // document.getElementById("ctrl").style.display = "none"
-            }
-        }
+        // function play(file) {
+        //     if (file != 'null') { //除第一张图外
+        //         //播放音乐
+        //         document.getElementById("voice").innerHTML =
+        //             '<audio controls="controls" autoplay="autoplay" id="audio_player" style="display:none"> <source src="' +
+        //             file +
+        //             '" > </audio>';
+        //         document.getElementById("dock-swiper").addEventListener("click", function () {
+        //             document.getElementById('audio_player').play();
+        //         }, false);
+        //         // 让控制播放的蒙版消失
+        //         // document.getElementById("ctrl").style.display = "none"
+        //     }
+        // }
 
         
 
@@ -970,6 +970,7 @@
 
             $(".logo").fadeIn(1500);
             $(".menu").slideToggle(1500);
+            
             // $(".header").fadeOut(500);
             // $(".header").fadeIn(1500);
             $(".main-pic").fadeIn(1500, function () {
