@@ -194,16 +194,36 @@
             window.location.href = addr;
         }
 
+        function audioAutoPlay(id){
+            var audio = document.getElementById(id);
+
+            var play = function() {
+                document.removeEventListener("WeixinJSBridgeReady", play);
+                document.removeEventListener("YixinJSBridgeReady", play);
+
+                audio.play();
+                audio.pause();
+                // document.removeEventListener("touchstart", play, false);
+            };
+            
+            audio.play();
+            audio.pause();
+
+            //weixin
+            document.addEventListener("WeixinJSBridgeReady", play, false);
+            //yixin
+            document.addEventListener('YixinJSBridgeReady', play, false);
+            // document.addEventListener("touchstart", play, false);
+            // alert(222)
+        }
+        
+
         var v = [0, 0, 0, 0, 0, 0, 0, 0];
         var audio = document.getElementById("voice");
 
         function playvoice(flag) {
 
-            if (v[flag] == 1) {
-                audio.pause();
-                // v[flag] = 2;
-                // document.getElementById("v" + flag.toString()).src = "img/play.png";
-            } else if (v[flag] == 0) {
+            if (v[flag] == 0) {
                 switch (flag) {
                     case 1:
                         audio.src = "audio/06sheng.mp3";
@@ -227,9 +247,10 @@
                         audio.src = "audio/07zhuguan.mp3";
                         break;
                 }
+                audioAutoPlay('voice'); 
                 audio.play();
                 // document.getElementById("v" + flag.toString()).src = "img/stop.png";
-                // v[flag] = 1;
+                v[flag] = 1;
             } else {
                 audio.play();
                 // document.getElementById("v" + flag.toString()).src = "img/stop.png";
