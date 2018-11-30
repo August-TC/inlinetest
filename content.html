@@ -203,7 +203,36 @@
             window.location.href = addr;
         }
 
+        function play(file) {
+            if (file != 'null') { //除第一张图外
+                //播放音乐
+                document.getElementById("voice").innerHTML =
+                    '<audio controls="controls" autoplay="autoplay" id="audio_player" style="display:none"> <source src="' +
+                    file +
+                    '" > </audio>';
+                    document.getElementById('audio_player').load();
+                // document.getElementById("dock-swiper").addEventListener("click", function () {
+                //     document.getElementById('audio_player').play();
+                // }, false);
+                // 让控制播放的蒙版消失
+                // document.getElementById("ctrl").style.display = "none"
+            }
+        }
 
+
+        //控制音乐暂停
+        function stop() {
+            var music = document.getElementById("audio_player");
+
+            if (music != null) {
+                if (music.paused) {
+
+                } else {
+                    music.pause();
+                }
+            }
+
+        }
 
         var pre = 0;
 
@@ -268,6 +297,7 @@
                 default:
                     break;
             }
+            document.getElementById('audio_player').play();
         }
 
         var scaled = false;
@@ -849,35 +879,6 @@
         //     t.preventDefault();
         // });
 
-        function play(file) {
-            if (file != 'null') { //除第一张图外
-                //播放音乐
-                document.getElementById("voice").innerHTML =
-                    '<audio controls="controls" autoplay="autoplay" id="audio_player" style="display:none"> <source src="' +
-                    file +
-                    '" > </audio>';
-                document.getElementById("dock-swiper").addEventListener("click", function () {
-                    document.getElementById('audio_player').play();
-                }, false);
-                // 让控制播放的蒙版消失
-                // document.getElementById("ctrl").style.display = "none"
-            }
-        }
-
-
-        //控制音乐暂停
-        function stop() {
-            var music = document.getElementById("audio_player");
-
-            if (music != null) {
-                if (music.paused) {
-
-                } else {
-                    music.pause();
-                }
-            }
-
-        }
 
         function checkCookie(name, value) {
             var cname = getCookie(name)
