@@ -69,19 +69,19 @@
         <div class="menu">
             <div class="menu-item" style="left: 0%;" onclick="HRef('about.html')">
                 <!-- <span>载乐俑</span> -->
-                <img src="img/about.png">
+                <!-- <img src="img/about.png"> -->
             </div>
             <div class="menu-item" style="left: 25%;" onclick="HRef('album.html')">
                 <!-- <span>唐乐库</span> -->
-                <img src="img/album.png">
+                <!-- <img src="img/album.png"> -->
             </div>
             <div class="menu-item" style="left: 50%;" onclick="HRef('message.html')">
                 <!-- <span>致唐朝</span> -->
-                <img src="img/send.png">
+                <!-- <img src="img/send.png"> -->
             </div>
             <div class="menu-item" style="left: 75%;" onclick="HRef('addition.html')">
                 <!-- <span>关于我</span> -->
-                <img src="img/addi.png">
+                <!-- <img src="img/addi.png"> -->
             </div>
         </div>
 
@@ -147,7 +147,7 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="pag">
-    
+
                     <img src="img/tri.png" />
                 </div>
             </div>
@@ -158,16 +158,24 @@
 
     <!-- 用于播放音乐的隐藏区域 -->
     <!-- 音乐的播放由轮播图中的点击区域和按钮实现 -->
-    <div id="voice">
-        <audio controls="controls"  id="audio_player1" style="display:none"> <source src="audio/06sheng.mp3"/> </audio>
-        <audio controls="controls"  id="audio_player2" style="display:none"> <source src="audio/03pipa.mp3"/> </audio>
-        <audio controls="controls"  id="audio_player3" style="display:none"> <source src="audio/05hengdi.mp3"/> </audio>
-        <audio controls="controls"  id="audio_player4" style="display:none"> <source src="audio/02paixiao.mp3"/> </audio>
-        <audio controls="controls" id="audio_player5" style="display:none"> <source src="audio/01konghou.mp3"/> </audio>
-        <audio controls="controls"  id="audio_player6" style="display:none"> <source src="audio/04guanzi.mp3"/> </audio>
-        <audio controls="controls" id="audio_player7" style="display:none"> <source src="audio/07zhuguan.mp3"/> </audio>
+    <audio id="voice" src=""></audio>
+    <!-- <div id="voice">
+        <audio controls="controls" id="audio_player1" style="display:none">
+            <source src="audio/06sheng.mp3" /> </audio>
+        <audio controls="controls" id="audio_player2" style="display:none">
+            <source src="audio/03pipa.mp3" /> </audio>
+        <audio controls="controls" id="audio_player3" style="display:none">
+            <source src="audio/05hengdi.mp3" /> </audio>
+        <audio controls="controls" id="audio_player4" style="display:none">
+            <source src="audio/02paixiao.mp3" /> </audio>
+        <audio controls="controls" id="audio_player5" style="display:none">
+            <source src="audio/01konghou.mp3" /> </audio>
+        <audio controls="controls" id="audio_player6" style="display:none">
+            <source src="audio/04guanzi.mp3" /> </audio>
+        <audio controls="controls" id="audio_player7" style="display:none">
+            <source src="audio/07zhuguan.mp3" /> </audio>
 
-    </div>
+    </div> -->
 
     <script src="js/intro.min.js"></script>
 
@@ -185,30 +193,84 @@
             //跳转到页面 addr
             window.location.href = addr;
         }
-        
-        
 
-        
-        
+        var v = [0, 0, 0, 0, 0, 0, 0, 0];
+        var audio = document.getElementById("voice");
 
-        var playing="audio_player1";
-        
+        function playvoice(flag) {
+
+            if (v[flag] == 1) {
+                audio.pause();
+                // v[flag] = 2;
+                // document.getElementById("v" + flag.toString()).src = "img/play.png";
+            } else if (v[flag] == 0) {
+                switch (flag) {
+                    case 1:
+                        audio.src = "audio/06sheng.mp3";
+                        break;
+                    case 2:
+                        audio.src = "audio/03pipa.mp3";
+                        break;
+                    case 3:
+                        audio.src = "audio/05hengdi.mp3";
+                        break;
+                    case 4:
+                        audio.src = "audio/02paixiao.mp3";
+                        break;
+                    case 5:
+                        audio.src = "audio/01konghou.mp3";
+                        break;
+                    case 6:
+                        audio.src = "audio/04guanzi.mp3";
+                        break;
+                    case 7:
+                        audio.src = "audio/07zhuguan.mp3";
+                        break;
+                }
+                audio.play();
+                // document.getElementById("v" + flag.toString()).src = "img/stop.png";
+                // v[flag] = 1;
+            } else {
+                audio.play();
+                // document.getElementById("v" + flag.toString()).src = "img/stop.png";
+                // v[flag] = 1;
+            }
+        }
+
+        //控制音乐暂停
+        function stop() {
+            var music = document.getElementById("voice");
+
+            if (music != null) {
+                if (music.paused) {
+
+                } else {
+                    music.pause();
+                }
+            }
+
+        }
+
+
+        var playing = "audio_player1";
+
 
         var pre = 0;
 
-        function changeContent(pos, able = false) {
-            if(playing!="0"){
-                            document.getElementById(playing.toString()).pause();
-                        }
+        function changeContent(pos, able) {
+            // if (playing != "0") {
+            //     document.getElementById(playing.toString()).pause();
+            // }
             switch (pos) {
                 case 1:
                     $("#dtl-picture").attr("src", "img/sheng.png");
                     $("#detail-title").text("「笙」");
                     $("#detail-txt").text("中原乐器 自周以来存在至今，19世纪下半叶传到欧洲对风琴等乐器有所影响。");
                     if (able) {
-                        document.getElementById("audio_player1").load();
-                        document.getElementById("audio_player1").play();
-                        playing="audio_player1";
+                        // document.getElementById("audio_player1").load();
+                        // document.getElementById("audio_player1").play();
+                        // playing = "audio_player1";
+                        playvoice(1);
                     }
                     break;
                 case 2:
@@ -216,9 +278,10 @@
                     $("#detail-title").text("「琵琶」");
                     $("#detail-txt").text("自汉代传入的波斯乐器，西汉文献有记载。这一件是四弦曲项琵琶。");
                     if (able) {
-                        document.getElementById("audio_player2").load();
-                        document.getElementById("audio_player2").play();
-                        playing="audio_player2";
+                        // document.getElementById("audio_player2").load();
+                        // document.getElementById("audio_player2").play();
+                        // playing = "audio_player2";
+                        playvoice(2);
                     }
                     break;
                 case 3:
@@ -226,9 +289,10 @@
                     $("#detail-title").text("「横笛」");
                     $("#detail-txt").text("其来自中原还是西域目前仍有争议。");
                     if (able) {
-                        document.getElementById("audio_player3").load();
-                        document.getElementById("audio_player3").play();
-                        playing="audio_player3";
+                        // document.getElementById("audio_player3").load();
+                        // document.getElementById("audio_player3").play();
+                        // playing = "audio_player3";
+                        playvoice(3);
                     }
                     break;
                 case 4:
@@ -236,9 +300,10 @@
                     $("#detail-title").text("「排箫（之一）」");
                     $("#detail-txt").text("来自西域，为竹子制成。 \n 中原乐器，宫廷中用使用。");
                     if (able) {
-                        document.getElementById("audio_player4").load();
-                        document.getElementById("audio_player4").play();
-                        playing="audio_player4";
+                        // document.getElementById("audio_player4").load();
+                        // document.getElementById("audio_player4").play();
+                        // playing = "audio_player4";
+                        playvoice(4);
                     }
                     break;
                 case 5:
@@ -246,9 +311,10 @@
                     $("#detail-title").text("「小箜篌」");
                     $("#detail-txt").text("汉代时自波斯传入，在宫廷雅乐中一直存在。");
                     if (able) {
-                        document.getElementById("audio_player5").load();
-                        document.getElementById("audio_player5").play();
-                        playing="audio_player5";
+                        // document.getElementById("audio_player5").load();
+                        // document.getElementById("audio_player5").play();
+                        // playing = "audio_player5";
+                        playvoice(5);
                     }
                     break;
                 case 6:
@@ -256,9 +322,10 @@
                     $("#detail-title").text("「管子」");
                     $("#detail-txt").text("古称筚篥，汉代自龟兹传来，音色雄厚，常用于表现边塞离别的之情。今民乐管弦乐队仍有使用。");
                     if (able) {
-                        document.getElementById("audio_player6").load();
-                        document.getElementById("audio_player6").play();
-                        playing="audio_player6";
+                        // document.getElementById("audio_player6").load();
+                        // document.getElementById("audio_player6").play();
+                        // playing = "audio_player6";
+                        playvoice(6);
                     }
                     break;
                 case 7:
@@ -266,9 +333,10 @@
                     $("#detail-title").text("「排箫（之二）」");
                     $("#detail-txt").text("来自西域，为竹子制成。 \n 中原乐器，宫廷中用使用。");
                     if (able) {
-                        document.getElementById("audio_player7").load();
-                        document.getElementById("audio_player7").play();
-                        playing="audio_player2";
+                        // document.getElementById("audio_player7").load();
+                        // document.getElementById("audio_player7").play();
+                        // playing = "audio_player7";
+                        playvoice(7);
                     }
                     break;
                 default:
@@ -521,7 +589,7 @@
                             break;
                     }
                     if (!scaled) {
-                        changeContent(p);
+                        changeContent(p,false);
                     }
                 },
             },
@@ -754,9 +822,9 @@
             clearTimeout(timeout);
             if (!scaled) {
                 $("#nav-left").fadeIn();
-            $("#nav-right").fadeIn();
+                $("#nav-right").fadeIn();
             }
-            
+
             // $("#hint_pic").fadeIn();
             moveEndX = e.originalEvent.changedTouches[0].pageX;
             moveEndY = e.originalEvent.changedTouches[0].pageY;
@@ -768,7 +836,7 @@
             // 根据flag，轮播图进行跳转
             slideToPic(flag);
 
-            
+
 
             if (!swipe) {
                 if (scaled) {
@@ -781,7 +849,7 @@
                     // stop();
                     // pre = 0;
                     showDetail(false);
-                    
+
 
                 } else {
                     if (!longpress) {
@@ -828,27 +896,15 @@
                     '<audio controls="controls" autoplay="autoplay" id="audio_player" style="display:none"> <source src="' +
                     file +
                     '" > </audio>';
-                    document.getElementById("dock-swiper").addEventListener("click", function () {
-        document.getElementById('audio_player').play();
-    }, false);
+                document.getElementById("dock-swiper").addEventListener("click", function () {
+                    document.getElementById('audio_player').play();
+                }, false);
                 // 让控制播放的蒙版消失
                 // document.getElementById("ctrl").style.display = "none"
             }
         }
 
-        //控制音乐暂停
-        function stop() {
-            var music = document.getElementById(playing.toString());
-
-            if (music != null) {
-                if (music.paused) {
-
-                } else {
-                    music.pause();
-                }
-            }
-
-        }
+        
 
         function checkCookie(name, value) {
             var cname = getCookie(name)
